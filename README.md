@@ -61,9 +61,9 @@ configure Inviso on the NameNode/ResourceManager host.
 
   ```bash
   > ./elasticsearch-1.3.2/bin/elasticsearch -d
-  > curl -XPUT http://localhost:9200/inviso -d @inviso/elasticsearch/mappings/config-settings.json
+  > curl -XPUT http://localhost:9200/inviso -H 'Content-Type: application/json' -d @inviso/elasticsearch/mappings/config-settings.json
     {"acknowledged":true}
-  > curl -XPUT http://localhost:9200/inviso-cluster -d @inviso/elasticsearch/mappings/cluster-settings.json
+  > curl -XPUT http://localhost:9200/inviso-cluster -H 'Content-Type: application/json' -d @inviso/elasticsearch/mappings/cluster-settings.json
     {"acknowledged":true}
   ```
 
